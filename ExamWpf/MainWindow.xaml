@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:ExamWpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF5300">
+        <DataGrid Name="earthquakeDataGrid"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,0,123" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Магнитуда" Binding="{Binding Magnitude}"/>
+                <DataGridTextColumn Header="Глубина эпицентра(km)" Binding="{Binding Depth}"/>
+                <DataGridTextColumn Header="Локация(Место)" Binding="{Binding Place}"/>
+                <DataGridTextColumn Header="Время" Binding="{Binding EventTime}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox Name="earthquakeCountTextBox" HorizontalAlignment="Stretch" Margin="129,301,394,65" TextWrapping="Wrap"/>
+        <Button Name="earthquakeSearchButton" Click="EarthquakeSearchButtonClick" Content="Search" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="129,359,394,10"/>
+        <Label Content="Earthquake Count" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Height="39" Width="119" RenderTransformOrigin="0.781,0.731"/>
+
     </Grid>
 </Window>

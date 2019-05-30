@@ -4,6 +4,35 @@
              xmlns:local="clr-namespace:ExamWpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBox">
+            <Style.Setters>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Background" Value="#808000"/>
+            </Style.Setters>
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Background" Value="#FDEAA8"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style.Setters>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Style.Setters>
+                <Setter Property="Background" Value="#A52A2A"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style.Setters>
+        </Style>
+
+        <Style TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style.Setters>
+        </Style>
     </Application.Resources>
 </Application>
